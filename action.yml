@@ -1,0 +1,13 @@
+name: 'Get the Green client'
+description: 'Coding your teams norms and analyse your code to get important metrics'
+inputs:
+  gtg-key:
+    description: 'The Get the Green repository key'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'check-circle'
+  color: 'green'
