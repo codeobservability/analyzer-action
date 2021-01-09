@@ -9,5 +9,5 @@ Add your workflow file, the following step
 ```yml
 - uses: getthegreen/client-action@master
   with:
-    gtg-key: {{ secrets.GTG_KEY }}
+    gtg-key: ${{ secrets.GTG_KEY }}
 ```
