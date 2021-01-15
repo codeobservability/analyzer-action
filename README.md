@@ -1,6 +1,6 @@
 # Get the Green Github Action
 
-This is a GitHub Action to check if your teams norms are met and analyze your code to get important metrics. This action **only work with `pull_request` trigger**.
+This is a GitHub Action to check if your teams norms are met and analyze your code to get important metrics. This action **only works with the `pull_request` trigger**.
 
 ## Getting started
 
