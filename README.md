@@ -1,4 +1,4 @@
-# Get the Green Github Action
+# Code Observability Github Action
 
 This is a GitHub Action to check if your teams norms are met and analyze your code to get important metrics. This action **only works with the `pull_request` trigger**.
 
@@ -7,9 +7,9 @@ This is a GitHub Action to check if your teams norms are met and analyze your co
 Add your workflow file, the following step
 
 ```yml
-- uses: getthegreen/client-action@master
+- uses: codeobservability/client-action@master
   with:
-    gtg-key: ${{ secrets.GTG_KEY }}
+    co-repo-key: ${{ secrets.CO_REPO_KEY }}
 ```
 
 A full workflow file example:
@@ -22,8 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to analyse the code with Get the Green client
     steps:
-    - name: Analyse the code step
-      uses: getthegreen/client-action@master
+    - name: Analyze the code step
+      uses: codeobservability/client-action@master
       with:
-        gtg-key: ${{ secrets.GTG_KEY }}
+        co-repo-key: ${{ secrets.CO_REPO_KEY }}
 ```

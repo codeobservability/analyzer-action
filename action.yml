@@ -1,14 +1,14 @@
 name: 'Get the Green client'
-description: 'Coding your teams norms and analyse your code to get important metrics'
+description: 'Coding your teams norms and analyze your code to get important metrics'
 inputs:
-  gtg-key:
-    description: 'The Get the Green repository key'
+  co-repo-key:
+    description: 'The Code Observability repository key'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.gtg-key }}
+    - ${{ inputs.co-repo-key }}
 
 branding:
   icon: 'check-circle'

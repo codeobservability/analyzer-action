@@ -1,3 +1,3 @@
 #!/bin/sh -l
-export GTG_KEY="$1"
-/gtg-client/entrypoint.sh
+export CO_REPOSITORY_KEY="$1"
+/client/entrypoint.sh
