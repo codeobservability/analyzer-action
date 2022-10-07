@@ -1,4 +1,4 @@
-name: 'Get the Green client'
+name: 'Code Observability Analyzer'
 description: 'Coding your teams norms and analyze your code to get important metrics'
 inputs:
   co-repo-key:
@@ -8,7 +8,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.co-repo-key }}
+    - ${{ inputs.co_repo_key }}
 
 branding:
   icon: 'check-circle'

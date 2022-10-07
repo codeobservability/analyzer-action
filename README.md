@@ -1,29 +1,53 @@
-# Code Observability Github Action
+# Code Observability Analyzer for Github Actions
 
 This is a GitHub Action to check if your teams norms are met and analyze your code to get important metrics. This action **only works with the `pull_request` trigger**.
 
-## Getting started
+## Usage
 
-Add your workflow file, the following step
+**Step 1: Set up Your workflow.yml File**
 
-```yml
-- uses: codeobservability/client-action@master
+* **Add checkout to your workflow:**
+
+For Code Observability Analyzer to run, check out your repository using [actions/checkout@v3](https://github.com/actions/checkout). **You will need to set fetch-depth: 0 to fetch all history for all branches and tags.** For example:
+	 
+```
+- name: Checkout repository
+  uses: actions/checkout@v3
   with:
-    co-repo-key: ${{ secrets.CO_REPO_KEY }}
+    fetch-depth: 0 # This is a required field for CodeGuru
 ```
 
-A full workflow file example:
+**Step 2: Add Code Observability Analyzer Action**
+
+* co_repo_key: **Required** The repository key from [codeobservability.com]
+
+```yml
+- uses: codeobservability/analyzer-action@master
+  with:
+    co_repo_key: ${{ secrets.CO_REPO_KEY }}
+```
+
+After your job is completed, you can view your results on [Code Observability](https://codeobservability.com).
+
+Example:
 
 ```yml
 on: [pull_request]
 
 jobs:
-  analyse_code_job:
+  analyze_code_job:
     runs-on: ubuntu-latest
-    name: A job to analyse the code with Get the Green client
+    name: Analyze your code with Code Observability
     steps:
-    - name: Analyze the code step
-      uses: codeobservability/client-action@master
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Code Observability Analyser
+      uses: codeobservability/analyzer-action@master
       with:
         co-repo-key: ${{ secrets.CO_REPO_KEY }}
 ```
+
+## License
+
+This library is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file.
