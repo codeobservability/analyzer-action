@@ -45,7 +45,7 @@ jobs:
     - name: Code Observability Analyser
       uses: codeobservability/analyzer-action@master
       with:
-        co-repo-key: ${{ secrets.CO_REPO_KEY }}
+        co_repo_key: ${{ secrets.CO_REPO_KEY }}
 ```
 
 ## License
