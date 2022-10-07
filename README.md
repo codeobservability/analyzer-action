@@ -1,6 +1,6 @@
 # Code Observability Analyzer for Github Actions
 
-This is a GitHub Action to check if your teams norms are met and analyze your code to get important metrics. This action **only works with the `pull_request` trigger**.
+This is a GitHub Action to check your teams norms and analyze your code to get important metrics. This action **only works with the `pull_request` trigger**.
 
 ## Usage
 
@@ -14,7 +14,7 @@ For Code Observability Analyzer to run, check out your repository using [actions
 - name: Checkout repository
   uses: actions/checkout@v3
   with:
-    fetch-depth: 0 # This is a required field for CodeGuru
+    fetch-depth: 0 # This is a required field for Code Observability Analyzer
 ```
 
 **Step 2: Add Code Observability Analyzer Action**
