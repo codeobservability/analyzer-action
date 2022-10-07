@@ -19,7 +19,7 @@ For Code Observability Analyzer to run, check out your repository using [actions
 
 **Step 2: Add Code Observability Analyzer Action**
 
-* co_repo_key: **Required** The repository key from [codeobservability.com]
+* co_repo_key: **Required** The repository key from [Code Observability](https://codeobservability.com)
 
 ```yml
 - uses: codeobservability/analyzer-action@master
