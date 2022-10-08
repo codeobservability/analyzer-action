@@ -10,7 +10,7 @@ This is a GitHub Action to check your teams norms and analyze your code to get i
 
 For Code Observability Analyzer to run, check out your repository using [actions/checkout@v3](https://github.com/actions/checkout). **You will need to set fetch-depth: 0 to fetch all history for all branches and tags.** For example:
 	 
-```
+```yml
 - name: Checkout repository
   uses: actions/checkout@v3
   with:
