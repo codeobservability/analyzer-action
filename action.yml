@@ -1,7 +1,7 @@
 name: 'Code Observability Analyzer'
 description: 'Coding your teams norms and analyze your code to get important metrics'
 inputs:
-  co-repo-key:
+  co_repo_key:
     description: 'The Code Observability repository key'
     required: true
 runs:
